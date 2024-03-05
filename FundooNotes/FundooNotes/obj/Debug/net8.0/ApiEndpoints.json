@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "FundooNotes.Controllers.FundooController",
+    "Method": "AddNewUser",
+    "RelativePath": "api/Fundoo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Model_Layer.Models.UserRegistrationModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Model_Layer.Models.UserRegistrationModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

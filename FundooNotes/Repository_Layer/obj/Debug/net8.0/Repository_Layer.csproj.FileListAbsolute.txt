@@ -1,0 +1,17 @@
+D:\C# Repository\FundooNotes\Repository_Layer\bin\Debug\net8.0\Repository_Layer.deps.json
+D:\C# Repository\FundooNotes\Repository_Layer\bin\Debug\net8.0\Repository_Layer.runtimeconfig.json
+D:\C# Repository\FundooNotes\Repository_Layer\bin\Debug\net8.0\Repository_Layer.dll
+D:\C# Repository\FundooNotes\Repository_Layer\bin\Debug\net8.0\Repository_Layer.pdb
+D:\C# Repository\FundooNotes\Repository_Layer\obj\Debug\net8.0\Repository_Layer.csproj.AssemblyReference.cache
+D:\C# Repository\FundooNotes\Repository_Layer\obj\Debug\net8.0\Repository_Layer.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Repository\FundooNotes\Repository_Layer\obj\Debug\net8.0\Repository_Layer.AssemblyInfoInputs.cache
+D:\C# Repository\FundooNotes\Repository_Layer\obj\Debug\net8.0\Repository_Layer.AssemblyInfo.cs
+D:\C# Repository\FundooNotes\Repository_Layer\obj\Debug\net8.0\Repository_Layer.csproj.CoreCompileInputs.cache
+D:\C# Repository\FundooNotes\Repository_Layer\obj\Debug\net8.0\Repository_Layer.dll
+D:\C# Repository\FundooNotes\Repository_Layer\obj\Debug\net8.0\refint\Repository_Layer.dll
+D:\C# Repository\FundooNotes\Repository_Layer\obj\Debug\net8.0\Repository_Layer.pdb
+D:\C# Repository\FundooNotes\Repository_Layer\obj\Debug\net8.0\Repository_Layer.genruntimeconfig.cache
+D:\C# Repository\FundooNotes\Repository_Layer\obj\Debug\net8.0\ref\Repository_Layer.dll
+D:\C# Repository\FundooNotes\Repository_Layer\bin\Debug\net8.0\Model_Layer.dll
+D:\C# Repository\FundooNotes\Repository_Layer\bin\Debug\net8.0\Model_Layer.pdb
+D:\C# Repository\FundooNotes\Repository_Layer\obj\Debug\net8.0\Reposito.C9099ADE.Up2Date
