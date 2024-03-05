@@ -7,6 +7,7 @@ using Model_Layer.Models;
 using Repository_Layer.ContextClass;
 using Repository_Layer.Entity;
 using Repository_Layer.InterfaceRL;
+using Repository_Layer.Hashing;
 
 namespace Repository_Layer.ServiceRL
 {
@@ -18,11 +19,11 @@ namespace Repository_Layer.ServiceRL
         {
             _context = context;
         }
-        public UserRegistrationModel AddNewUser(UserRegistrationModel model)
+        public string AddNewUser(UserRegistrationModel model)
         {
             if(IsUserAlreadyRegister(model.Email))
             {
-                return null;
+                return "User Already Registered";
             }
             else
             {
@@ -30,23 +31,23 @@ namespace Repository_Layer.ServiceRL
                 userRegistration.FirstName = model.FirstName;
                 userRegistration.LastName = model.LastName;
                 userRegistration.Email = model.Email;
-                userRegistration.Password = model.Password;
+                userRegistration.Password = HashingPassword.HashedPassword(model.Password);
 
                 UserLogin userLogin = new UserLogin();
                 userLogin.Email = model.Email;
-                userLogin.Password = model.Password;
+                userLogin.Password = HashingPassword.HashedPassword(model.Password);
 
                 _context.Registrations_Details.Add(userRegistration);
                 _context.Login_Details.Add(userLogin);
                 _context.SaveChanges();
 
-                return model;
+                return "User Registered Successfully";
             }
         }
 
         public bool IsUserAlreadyRegister(string email)
         {
-            var result = _context.Registrations_Details.FirstOrDefault(r => r.Email.CompareTo(email)==0);
+            var result = _context.Registrations_Details.FirstOrDefault(r => r.Email == email);
             if(result != null)
             {
                 return true;
@@ -55,6 +56,33 @@ namespace Repository_Layer.ServiceRL
             {
                 return false;
             }
+        }
+
+        public string UserLogin(UserLoginModel model)
+        {
+            try
+            {
+                string hashedPassword = HashingPassword.HashedPassword(model.Password);
+
+                var result = _context.Login_Details.FirstOrDefault(r => r.Email == model.Email);
+                if (result == null)
+                {
+                    return "User not found.\n(OR)\nPlease check entered email address.";
+                }
+                if ((result.Password ==hashedPassword) && (result != null))
+                {
+                    return "Login Successful.";
+                }
+                else
+                {
+                    return "Wrong Password.";
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+
         }
     }
 }

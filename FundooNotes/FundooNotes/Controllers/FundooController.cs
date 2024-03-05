@@ -17,9 +17,17 @@ namespace FundooNotes.Controllers
         }
 
         [HttpPost]
-        public UserRegistrationModel AddNewUser(UserRegistrationModel model)
+        [Route("registration")]
+        public string AddNewUser(UserRegistrationModel model)
         {
             return _userInterfaceBL.AddNewUser(model);
+        }
+
+        [HttpPost]
+        [Route("login")]
+        public string UserLogin(UserLoginModel model)
+        {
+            return _userInterfaceBL.UserLogin(model);
         }
     }
 }
