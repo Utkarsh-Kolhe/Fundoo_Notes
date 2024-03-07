@@ -18,7 +18,7 @@ namespace Bussiness_Layer.ServiceBL
             _userInterfaceRL = userInterfaceRL;
         }
 
-        public string AddNewUser(UserRegistrationModel model)
+        public bool AddNewUser(UserRegistrationModel model)
         {
             return _userInterfaceRL.AddNewUser(model);
         }

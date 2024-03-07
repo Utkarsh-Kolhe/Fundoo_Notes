@@ -9,7 +9,7 @@ namespace Bussiness_Layer.InterfaceBL
 {
     public interface IUserInterfaceBL
     {
-        public string AddNewUser(UserRegistrationModel model);
+        public bool AddNewUser(UserRegistrationModel model);
 
         public string UserLogin(UserLoginModel model);
     }

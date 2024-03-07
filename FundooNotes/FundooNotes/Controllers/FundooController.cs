@@ -10,17 +10,38 @@ namespace FundooNotes.Controllers
     public class FundooController : ControllerBase
     {
         private readonly IUserInterfaceBL _userInterfaceBL;
-
+        //private readonly ResponseModel<T> _responseModel;
+        
         public FundooController(IUserInterfaceBL userInterfaceBL)
         {
             _userInterfaceBL = userInterfaceBL;
+
         }
 
         [HttpPost]
         [Route("registration")]
-        public string AddNewUser(UserRegistrationModel model)
+        public ResponseModel<UserRegistrationModel> AddNewUser(UserRegistrationModel model)
         {
-            return _userInterfaceBL.AddNewUser(model);
+            var responseModel = new ResponseModel<UserRegistrationModel>();
+
+            
+            bool result = _userInterfaceBL.AddNewUser(model);
+
+            if (result)
+            {
+                responseModel.StatusCode = 201;
+                responseModel.Message = "User registered successfully.";
+                responseModel.Data = model;
+            }
+            else
+            {
+                responseModel.StatusCode = 400;
+                responseModel.Message = "User exist already.";
+                responseModel.IsSuccess = false;
+            }
+            
+            
+            return responseModel;
         }
 
         [HttpPost]

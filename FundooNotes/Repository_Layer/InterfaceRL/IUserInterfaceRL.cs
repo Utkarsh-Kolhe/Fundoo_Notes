@@ -10,7 +10,7 @@ namespace Repository_Layer.InterfaceRL
 {
     public interface IUserInterfaceRL
     {
-        public string AddNewUser(UserRegistrationModel model);
+        public bool AddNewUser(UserRegistrationModel model);
 
         public string UserLogin(UserLoginModel model);
     }

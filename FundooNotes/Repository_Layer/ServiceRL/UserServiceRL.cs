@@ -14,34 +14,38 @@ namespace Repository_Layer.ServiceRL
     public class UserServiceRL : IUserInterfaceRL
     {
         private readonly FundooContext _context;
+        private HashingPassword _hashingPassword;
 
-        public UserServiceRL(FundooContext context)
+        public UserServiceRL(FundooContext context, HashingPassword hashingPassword)
         {
             _context = context;
+            _hashingPassword = hashingPassword;
         }
-        public string AddNewUser(UserRegistrationModel model)
+        public bool AddNewUser(UserRegistrationModel model)
         {
             if(IsUserAlreadyRegister(model.Email))
             {
-                return "User Already Registered";
+                return false; // false => user already registerd.
             }
             else
             {
                 UserRegistration userRegistration = new UserRegistration();
+                string password = _hashingPassword.HashPassword(model.Password);
+
                 userRegistration.FirstName = model.FirstName;
                 userRegistration.LastName = model.LastName;
                 userRegistration.Email = model.Email;
-                userRegistration.Password = HashingPassword.HashedPassword(model.Password);
+                userRegistration.Password = password;
 
                 UserLogin userLogin = new UserLogin();
                 userLogin.Email = model.Email;
-                userLogin.Password = HashingPassword.HashedPassword(model.Password);
+                userLogin.Password = password;
 
                 _context.Registrations_Details.Add(userRegistration);
                 _context.Login_Details.Add(userLogin);
                 _context.SaveChanges();
 
-                return "User Registered Successfully";
+                return true; // true => successfully registered.
             }
         }
 
@@ -60,29 +64,29 @@ namespace Repository_Layer.ServiceRL
 
         public string UserLogin(UserLoginModel model)
         {
-            try
-            {
-                string hashedPassword = HashingPassword.HashedPassword(model.Password);
+            UserLogin result = null;
 
-                var result = _context.Login_Details.FirstOrDefault(r => r.Email == model.Email);
-                if (result == null)
-                {
-                    return "User not found.\n(OR)\nPlease check entered email address.";
-                }
-                if ((result.Password ==hashedPassword) && (result != null))
-                {
-                    return "Login Successful.";
-                }
-                else
-                {
-                    return "Wrong Password.";
-                }
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
+            result = _context.Login_Details.FirstOrDefault(r => r.Email == model.Email);
 
+            bool validUser = false;
+
+            if(result != null)
+            {
+                validUser = _hashingPassword.VerifyPassword(model.Password, result.Password);
+
+            }
+            else
+            {
+                return "User not found.\n(OR)\nPlease check entered email address.";
+            }
+            if (validUser)
+            {
+                return "Login Successful.";
+            }
+            else
+            {
+                return "Wrong Password.";
+            }
         }
     }
 }

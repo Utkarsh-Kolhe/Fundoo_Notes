@@ -41,7 +41,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "Model_Layer.Models.ResponseModel\u00601[[Model_Layer.Models.UserRegistrationModel, Model_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
