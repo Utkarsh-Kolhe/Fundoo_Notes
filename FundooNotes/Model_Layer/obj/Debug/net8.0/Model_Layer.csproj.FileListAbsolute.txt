@@ -9,3 +9,4 @@ D:\C# Repository\FundooNotes\Model_Layer\obj\Debug\net8.0\Model_Layer.dll
 D:\C# Repository\FundooNotes\Model_Layer\obj\Debug\net8.0\refint\Model_Layer.dll
 D:\C# Repository\FundooNotes\Model_Layer\obj\Debug\net8.0\Model_Layer.pdb
 D:\C# Repository\FundooNotes\Model_Layer\obj\Debug\net8.0\ref\Model_Layer.dll
+D:\C# Repository\FundooNotes\Model_Layer\obj\Debug\net8.0\Model_Layer.csproj.AssemblyReference.cache

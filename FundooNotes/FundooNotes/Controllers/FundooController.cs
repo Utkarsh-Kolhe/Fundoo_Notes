@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Bussiness_Layer.InterfaceBL;
 using Model_Layer.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FundooNotes.Controllers
 {
@@ -10,7 +11,7 @@ namespace FundooNotes.Controllers
     public class FundooController : ControllerBase
     {
         private readonly IUserInterfaceBL _userInterfaceBL;
-        //private readonly ResponseModel<T> _responseModel;
+        
         
         public FundooController(IUserInterfaceBL userInterfaceBL)
         {
@@ -44,11 +45,13 @@ namespace FundooNotes.Controllers
             return responseModel;
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [Route("login")]
         public string UserLogin(UserLoginModel model)
         {
-            return _userInterfaceBL.UserLogin(model);
+            string str = _userInterfaceBL.UserLogin(model);
+            return str;
         }
     }
 }

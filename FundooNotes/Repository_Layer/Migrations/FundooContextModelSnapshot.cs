@@ -42,6 +42,42 @@ namespace Repository_Layer.Migrations
                     b.ToTable("Login_Details");
                 });
 
+            modelBuilder.Entity("Repository_Layer.Entity.UserNotes", b =>
+                {
+                    b.Property<int>("NoteId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NoteId"));
+
+                    b.Property<string>("Colour")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsArchived")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("NoteId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Notes");
+                });
+
             modelBuilder.Entity("Repository_Layer.Entity.UserRegistration", b =>
                 {
                     b.Property<int>("Id")
@@ -69,6 +105,17 @@ namespace Repository_Layer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Registrations_Details");
+                });
+
+            modelBuilder.Entity("Repository_Layer.Entity.UserNotes", b =>
+                {
+                    b.HasOne("Repository_Layer.Entity.UserRegistration", "Registrations_Details")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Registrations_Details");
                 });
 #pragma warning restore 612, 618
         }

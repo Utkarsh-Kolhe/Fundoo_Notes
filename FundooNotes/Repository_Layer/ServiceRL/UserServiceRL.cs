@@ -8,6 +8,9 @@ using Repository_Layer.ContextClass;
 using Repository_Layer.Entity;
 using Repository_Layer.InterfaceRL;
 using Repository_Layer.Hashing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using Repository_Layer.JWT;
+using Microsoft.Extensions.Configuration;
 
 namespace Repository_Layer.ServiceRL
 {
@@ -15,11 +18,13 @@ namespace Repository_Layer.ServiceRL
     {
         private readonly FundooContext _context;
         private HashingPassword _hashingPassword;
+        private readonly IConfiguration _config;
 
-        public UserServiceRL(FundooContext context, HashingPassword hashingPassword)
+        public UserServiceRL(FundooContext context, HashingPassword hashingPassword, IConfiguration config)
         {
             _context = context;
             _hashingPassword = hashingPassword;
+            _config = config;
         }
         public bool AddNewUser(UserRegistrationModel model)
         {
@@ -64,28 +69,27 @@ namespace Repository_Layer.ServiceRL
 
         public string UserLogin(UserLoginModel model)
         {
-            UserLogin result = null;
-
-            result = _context.Login_Details.FirstOrDefault(r => r.Email == model.Email);
+            var user = _context.Login_Details.FirstOrDefault(r => r.Email == model.Email);
 
             bool validUser = false;
 
-            if(result != null)
+            if(user != null)
             {
-                validUser = _hashingPassword.VerifyPassword(model.Password, result.Password);
+                validUser = _hashingPassword.VerifyPassword(model.Password, user.Password);
+                if (validUser)
+                {
+                    JwtToken token = new JwtToken(_config);
+                    return token.GenerateToken(user);
+                }
+                else
+                {
+                    return "Wrong Password.";
+                }
 
             }
             else
             {
                 return "User not found.\n(OR)\nPlease check entered email address.";
-            }
-            if (validUser)
-            {
-                return "Login Successful.";
-            }
-            else
-            {
-                return "Wrong Password.";
             }
         }
     }
