@@ -1,47 +1,15 @@
 [
   {
-    "ContainingType": "FundooNotes.Controllers.FundooController",
-    "Method": "UserLogin",
-    "RelativePath": "api/Fundoo/login",
-    "HttpMethod": "POST",
+    "ContainingType": "FundooNotes.Controllers.NotesController",
+    "Method": "ViewNote",
+    "RelativePath": "api/Notes/getnotes",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "model",
-        "Type": "Model_Layer.Models.UserLoginModel",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "FundooNotes.Controllers.FundooController",
-    "Method": "AddNewUser",
-    "RelativePath": "api/Fundoo/registration",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "model",
-        "Type": "Model_Layer.Models.UserRegistrationModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Model_Layer.Models.ResponseModel\u00601[[Model_Layer.Models.UserRegistrationModel, Model_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Model_Layer.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[Repository_Layer.Entity.UserNotes, Repository_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -68,6 +36,58 @@
     "ReturnTypes": [
       {
         "Type": "Model_Layer.Models.ResponseModel\u00601[[Model_Layer.Models.NotesModel, Model_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FundooNotes.Controllers.UserController",
+    "Method": "UserLogin",
+    "RelativePath": "api/User/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Model_Layer.Models.UserLoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FundooNotes.Controllers.UserController",
+    "Method": "AddNewUser",
+    "RelativePath": "api/User/registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Model_Layer.Models.UserRegistrationModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Model_Layer.Models.ResponseModel\u00601[[Model_Layer.Models.UserRegistrationModel, Model_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

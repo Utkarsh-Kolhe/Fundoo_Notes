@@ -8,10 +8,8 @@ namespace Model_Layer.Models
 {
     public class ResponseModel<T>
     {
-        public int StatusCode { get; set; }
-
-        public bool IsSuccess { get; set; } = true;
+        public bool Success { get; set; } = true;
         public string Message { get; set; } = "";
-        public T? Data { get; set; }
+        public T Data { get; set; }
     }
 }

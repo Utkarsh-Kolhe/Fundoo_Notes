@@ -1,4 +1,5 @@
 ﻿using Model_Layer.Models;
+using Repository_Layer.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Bussiness_Layer.InterfaceBL
     public interface INoteInterfaceBL
     {
         public bool AddNote(NotesModel model, int id);
+        public List<UserNotes> ViewNote(int id);
     }
 }

@@ -38,5 +38,11 @@ namespace Repository_Layer.ServiceRL
 
             return true;
         }
+
+        public List<UserNotes> ViewNote(int id)
+        {
+            List<UserNotes> noteList = _fundooContext.Notes.Where(e => e.UserId == id).ToList();
+            return noteList;
+        }
     }
 }

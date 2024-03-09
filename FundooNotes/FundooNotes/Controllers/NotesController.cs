@@ -5,6 +5,8 @@ using Repository_Layer.InterfaceRL;
 using Bussiness_Layer.InterfaceBL;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Azure;
+using Repository_Layer.Entity;
 
 namespace FundooNotes.Controllers
 {
@@ -36,7 +38,32 @@ namespace FundooNotes.Controllers
             else
             {
                 response.Message = "Unable to add Note.";
-                response.IsSuccess = false;
+                response.Success = false;
+            }
+            return response;
+        }
+
+        [HttpGet]
+        [Route("getnotes")]
+        [Authorize]
+        public ResponseModel<List<UserNotes>> ViewNote()
+        {
+            string _id = User.FindFirstValue("UserId");
+            int id = Convert.ToInt32(_id);
+
+            var noteList = _noteInterfaceBL.ViewNote(id);
+            var response = new ResponseModel<List<UserNotes>>();
+
+            if (noteList.Count == 0)
+            {
+                response.Message = "There is no note.";
+                response.Success = false;
+                response.Data = noteList;
+            }
+            else
+            {
+                response.Message = "Notes retrive successfully.";
+                response.Data = noteList;
             }
             return response;
         }

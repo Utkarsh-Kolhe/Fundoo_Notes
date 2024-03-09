@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Repository_Layer.InterfaceRL;
+using Repository_Layer.Entity;
 
 namespace Bussiness_Layer.ServiceBL
 {
@@ -20,6 +21,11 @@ namespace Bussiness_Layer.ServiceBL
         public bool AddNote(NotesModel model, int id)
         {
             return _noteRL.AddNote(model, id);
+        }
+
+        public List<UserNotes> ViewNote(int id)
+        {
+            return _noteRL.ViewNote(id);
         }
     }
 }
