@@ -44,5 +44,24 @@ namespace Repository_Layer.ServiceRL
             List<UserNotes> noteList = _fundooContext.Notes.Where(e => e.UserId == id).ToList();
             return noteList;
         }
+
+        public bool EditNote(int noteId, int userId, NotesModel model)
+        {
+            var note = _fundooContext.Notes.FirstOrDefault(e => e.UserId == userId && e.NoteId == noteId);
+            if (note != null)
+            {
+                note.Title = model.Title;
+                note.Description = model.Description;
+                note.Colour = model.Colour;
+                note.UserId = userId;
+                //note.NoteId = noteId;
+                _fundooContext.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

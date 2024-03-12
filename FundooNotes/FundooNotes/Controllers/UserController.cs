@@ -46,10 +46,26 @@ namespace FundooNotes.Controllers
         [AllowAnonymous]
         [HttpPost]
         [Route("login")]
-        public string UserLogin(UserLoginModel model)
+        public ResponseModel<string> UserLogin(UserLoginModel model)
         {
-            string str = _userInterfaceBL.UserLogin(model);
-            return str;
+            string token = _userInterfaceBL.UserLogin(model);
+            var responseModel = new ResponseModel<string>();
+            if(token.CompareTo("Wrong Password.")==0)
+            {
+                responseModel.Message = "Wrong Password.";
+                responseModel.Success = false;
+            }
+            else if(token.CompareTo("User not found.\n(OR)\nPlease check entered email address.") == 0)
+            {
+                responseModel.Message = "User not found.\n(OR)\nPlease check entered email address.";
+                responseModel.Success = false;
+            }
+            else
+            {
+                responseModel.Message = "Token generated successfully.";
+                responseModel.Data = token;
+            }
+            return responseModel;
         }
     }
 }

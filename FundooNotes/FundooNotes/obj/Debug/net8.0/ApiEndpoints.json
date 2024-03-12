@@ -1,6 +1,37 @@
 [
   {
     "ContainingType": "FundooNotes.Controllers.NotesController",
+    "Method": "EditNote",
+    "RelativePath": "api/Notes/editnote",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "noteId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "Model_Layer.Models.NotesModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Model_Layer.Models.ResponseModel\u00601[[Model_Layer.Models.NotesModel, Model_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FundooNotes.Controllers.NotesController",
     "Method": "ViewNote",
     "RelativePath": "api/Notes/getnotes",
     "HttpMethod": "GET",
@@ -61,7 +92,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "Model_Layer.Models.ResponseModel\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

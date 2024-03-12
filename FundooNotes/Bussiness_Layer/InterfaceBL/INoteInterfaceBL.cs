@@ -12,5 +12,9 @@ namespace Bussiness_Layer.InterfaceBL
     {
         public bool AddNote(NotesModel model, int id);
         public List<UserNotes> ViewNote(int id);
+
+        public bool EditNote(int noteId, int userId, NotesModel model);
+
+        
     }
 }

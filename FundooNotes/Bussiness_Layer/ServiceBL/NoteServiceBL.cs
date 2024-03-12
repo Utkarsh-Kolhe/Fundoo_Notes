@@ -27,5 +27,10 @@ namespace Bussiness_Layer.ServiceBL
         {
             return _noteRL.ViewNote(id);
         }
+
+        public bool EditNote(int noteId, int userId, NotesModel model)
+        {
+            return _noteRL.EditNote(noteId, userId, model);
+        }
     }
 }

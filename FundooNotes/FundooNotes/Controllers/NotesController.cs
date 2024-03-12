@@ -26,10 +26,13 @@ namespace FundooNotes.Controllers
         [Authorize]
         public ResponseModel<NotesModel> AddNote(NotesModel model)
         {
-            string _id = User.FindFirstValue("UserId");
+            var _id = User.FindFirstValue("UserId");
             int id = Convert.ToInt32(_id);
+
             bool valid = _noteInterfaceBL.AddNote(model, id);
+
             var response = new ResponseModel<NotesModel>();
+
             if (valid)
             {
                 response.Message = "Note added successfully.";
@@ -48,7 +51,7 @@ namespace FundooNotes.Controllers
         [Authorize]
         public ResponseModel<List<UserNotes>> ViewNote()
         {
-            string _id = User.FindFirstValue("UserId");
+            var _id = User.FindFirstValue("UserId");
             int id = Convert.ToInt32(_id);
 
             var noteList = _noteInterfaceBL.ViewNote(id);
@@ -66,6 +69,32 @@ namespace FundooNotes.Controllers
                 response.Data = noteList;
             }
             return response;
+        }
+
+        [HttpPut]
+        [Route("editnote")]
+        [Authorize]
+        public ResponseModel<NotesModel> EditNote(int noteId, NotesModel model)
+        {
+            var responseModel = new ResponseModel<NotesModel>();
+
+            var _userId = User.FindFirstValue("UserId");
+            int userId = Convert.ToInt32(_userId);
+
+            bool result = _noteInterfaceBL.EditNote(noteId, userId, model);
+
+            if(result)
+            {
+                responseModel.Message = "Note edited successfully.";
+                responseModel.Data = model;
+            }
+            else
+            {
+                responseModel.Success = false;
+                responseModel.Message = "Error while editing the note,Please try again";
+            }
+
+            return responseModel;
         }
     }
 }
