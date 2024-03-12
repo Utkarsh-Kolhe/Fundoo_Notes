@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "FundooNotes.Controllers.NotesController",
+    "Method": "DeleteNote",
+    "RelativePath": "api/Notes/deletenote",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "noteId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Model_Layer.Models.ResponseModel\u00601[[Model_Layer.Models.NotesModel, Model_Layer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FundooNotes.Controllers.NotesController",
     "Method": "EditNote",
     "RelativePath": "api/Notes/editnote",
     "HttpMethod": "PUT",

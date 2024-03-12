@@ -16,6 +16,6 @@ namespace Repository_Layer.InterfaceRL
 
         public bool EditNote(int noteId, int userId, NotesModel model);
 
-       
+        public bool DeleteNote(int noteId);
     }
 }

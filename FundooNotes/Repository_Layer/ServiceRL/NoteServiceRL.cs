@@ -63,5 +63,20 @@ namespace Repository_Layer.ServiceRL
                 return false;
             }
         }
+
+        public bool DeleteNote(int noteId)
+        {
+            var userNote = _fundooContext.Notes.FirstOrDefault(e => e.NoteId == noteId);
+            if (userNote != null)
+            {
+                _fundooContext.Notes.Remove(userNote);
+                _fundooContext.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

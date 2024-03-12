@@ -96,5 +96,26 @@ namespace FundooNotes.Controllers
 
             return responseModel;
         }
+
+        [HttpDelete]
+        [Route("deletenote")]
+        [Authorize]
+        public ResponseModel<NotesModel> DeleteNote(int noteId)
+        {
+            var responseModel = new ResponseModel<NotesModel>();
+
+            bool result = _noteInterfaceBL.DeleteNote(noteId);
+
+            if (result)
+            {
+                responseModel.Message = "Note deleted successfully";
+            }
+            else
+            {
+                responseModel.Success = false;
+                responseModel.Message = "There was a Error while deleting the note, Please try again";
+            }
+            return responseModel;
+        }
     }
 }
