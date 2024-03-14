@@ -15,22 +15,21 @@ namespace Repository_Layer.JWT
     {
         private readonly IConfiguration _config;
         public JwtToken(IConfiguration config)
-
         {
             _config = config;
-
         }
 
-        public string GenerateToken(UserLogin user)
+        public string GenerateToken(UserLoginEntity user)
         {
+
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-            //Initializing an array of Claim type objects
+
             var claims = new[]
             {
-               new Claim("Email",user.Email),                   //Creating Claim object that would get stored in Jwt payload
-               new Claim("UserId",user.Id.ToString())
+               new Claim("Email",user.Email),
+               new Claim("UserId",user.Id.ToString()),
             };
 
             var token = new JwtSecurityToken(

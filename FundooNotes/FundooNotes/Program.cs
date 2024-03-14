@@ -48,11 +48,11 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddDbContext<FundooContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")));
 
-builder.Services.AddTransient<IUserInterfaceBL, UserServiceBL>();
-builder.Services.AddTransient<IUserInterfaceRL, UserServiceRL>();
-builder.Services.AddTransient<INoteInterfaceBL, NoteServiceBL>();
-builder.Services.AddTransient<INoteInterfaceRL, NoteServiceRL>();
-builder.Services.AddTransient<HashingPassword>();
+builder.Services.AddScoped<IUserInterfaceBL, UserServiceBL>();
+builder.Services.AddScoped<IUserInterfaceRL, UserServiceRL>();
+builder.Services.AddScoped<INoteInterfaceBL, NoteServiceBL>();
+builder.Services.AddScoped<INoteInterfaceRL, NoteServiceRL>();
+builder.Services.AddScoped<HashingPassword>();
 
 //Jwt
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

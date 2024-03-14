@@ -34,7 +34,7 @@ namespace Repository_Layer.ServiceRL
             }
             else
             {
-                UserRegistration userRegistration = new UserRegistration();
+                UserRegistrationEntity userRegistration = new UserRegistrationEntity();
                 string password = _hashingPassword.HashPassword(model.Password);
 
                 userRegistration.FirstName = model.FirstName;
@@ -42,7 +42,7 @@ namespace Repository_Layer.ServiceRL
                 userRegistration.Email = model.Email;
                 userRegistration.Password = password;
 
-                UserLogin userLogin = new UserLogin();
+                UserLoginEntity userLogin = new UserLoginEntity();
                 userLogin.Email = model.Email;
                 userLogin.Password = password;
 

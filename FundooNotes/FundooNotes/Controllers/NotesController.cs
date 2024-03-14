@@ -22,7 +22,6 @@ namespace FundooNotes.Controllers
         }
 
         [HttpPost]
-        [Route("newnote")]
         [Authorize]
         public ResponseModel<NotesModel> AddNote(NotesModel model)
         {
@@ -47,15 +46,14 @@ namespace FundooNotes.Controllers
         }
 
         [HttpGet]
-        [Route("getnotes")]
         [Authorize]
-        public ResponseModel<List<UserNotes>> ViewNote()
+        public ResponseModel<List<NotesEntity>> ViewNote()
         {
             var _id = User.FindFirstValue("UserId");
             int id = Convert.ToInt32(_id);
 
             var noteList = _noteInterfaceBL.ViewNote(id);
-            var response = new ResponseModel<List<UserNotes>>();
+            var response = new ResponseModel<List<NotesEntity>>();
 
             if (noteList.Count == 0)
             {
@@ -72,7 +70,6 @@ namespace FundooNotes.Controllers
         }
 
         [HttpPut]
-        [Route("editnote")]
         [Authorize]
         public ResponseModel<NotesModel> EditNote(int noteId, NotesModel model)
         {
@@ -98,7 +95,6 @@ namespace FundooNotes.Controllers
         }
 
         [HttpDelete]
-        [Route("deletenote")]
         [Authorize]
         public ResponseModel<NotesModel> DeleteNote(int noteId)
         {
@@ -114,6 +110,32 @@ namespace FundooNotes.Controllers
             {
                 responseModel.Success = false;
                 responseModel.Message = "There was a Error while deleting the note, Please try again";
+            }
+            return responseModel;
+        }
+
+        [HttpPatch]
+        [Route("archive")]
+        [Authorize]
+        public ResponseModel<string> ArchiveUnarchiveNote(int noteId)
+        {
+            var responseModel = new ResponseModel<string>();
+            int result = _noteInterfaceBL.ArchiveUnarchiveNote(noteId);
+            
+            if(result == 1)
+            {
+                responseModel.Success = true;
+                responseModel.Message = "Note unarchived successfully.";
+            }
+            else if (result == 2)
+            {
+                responseModel.Success = true;
+                responseModel.Message = "Note archived successfully.";
+            }
+            else
+            {
+                responseModel.Success = false;
+                responseModel.Message = "Note not found";
             }
             return responseModel;
         }

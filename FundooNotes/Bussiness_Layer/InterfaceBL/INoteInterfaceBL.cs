@@ -11,10 +11,12 @@ namespace Bussiness_Layer.InterfaceBL
     public interface INoteInterfaceBL
     {
         public bool AddNote(NotesModel model, int id);
-        public List<UserNotes> ViewNote(int id);
+        public List<NotesEntity> ViewNote(int id);
 
         public bool EditNote(int noteId, int userId, NotesModel model);
 
         public bool DeleteNote(int noteId);
+
+        public int ArchiveUnarchiveNote(int noteId);
     }
 }

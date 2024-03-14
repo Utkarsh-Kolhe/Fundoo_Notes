@@ -23,7 +23,7 @@ namespace Bussiness_Layer.ServiceBL
             return _noteRL.AddNote(model, id);
         }
 
-        public List<UserNotes> ViewNote(int id)
+        public List<NotesEntity> ViewNote(int id)
         {
             return _noteRL.ViewNote(id);
         }
@@ -36,6 +36,11 @@ namespace Bussiness_Layer.ServiceBL
         public bool DeleteNote(int noteId)
         {
             return _noteRL.DeleteNote(noteId);
+        }
+
+        public int ArchiveUnarchiveNote(int noteId)
+        {
+            return _noteRL.ArchiveUnarchiveNote(noteId);
         }
     }
 }

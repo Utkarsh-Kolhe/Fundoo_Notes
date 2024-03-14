@@ -25,7 +25,7 @@ namespace Repository_Layer.ServiceRL
         public bool AddNote(NotesModel model, int id)
         {
 
-            UserNotes userNote = new UserNotes();
+            NotesEntity userNote = new NotesEntity();
 
             
             userNote.Title = model.Title;
@@ -39,9 +39,9 @@ namespace Repository_Layer.ServiceRL
             return true;
         }
 
-        public List<UserNotes> ViewNote(int id)
+        public List<NotesEntity> ViewNote(int id)
         {
-            List<UserNotes> noteList = _fundooContext.Notes.Where(e => e.UserId == id).ToList();
+            List<NotesEntity> noteList = _fundooContext.Notes.Where(e => e.UserId == id).ToList();
             return noteList;
         }
 
@@ -54,7 +54,6 @@ namespace Repository_Layer.ServiceRL
                 note.Description = model.Description;
                 note.Colour = model.Colour;
                 note.UserId = userId;
-                //note.NoteId = noteId;
                 _fundooContext.SaveChanges();
                 return true;
             }
@@ -77,6 +76,29 @@ namespace Repository_Layer.ServiceRL
             {
                 return false;
             }
+        }
+
+        public int ArchiveUnarchiveNote(int noteId)
+        {
+            var Note = _fundooContext.Notes.FirstOrDefault(o => o.NoteId == noteId);
+            if (Note != null)
+            {
+                if(Note.IsArchived)
+                {
+                    Note.IsArchived = false;
+                    _fundooContext.SaveChanges();
+                    return 1; // 1 => note unarchived 
+                }
+                else
+                {
+                    Note.IsArchived = true;
+                    _fundooContext.SaveChanges();
+                    return 2; // 2 => note archived
+                }
+
+            }
+            
+            return 0; // 0 => note not found
         }
     }
 }
