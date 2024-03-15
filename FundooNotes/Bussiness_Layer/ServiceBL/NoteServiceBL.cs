@@ -42,5 +42,10 @@ namespace Bussiness_Layer.ServiceBL
         {
             return _noteRL.ArchiveUnarchiveNote(noteId);
         }
+
+        public int TrashUntrashNote(int noteId)
+        {
+            return _noteRL.TrashUntrashNote(noteId);
+        }
     }
 }

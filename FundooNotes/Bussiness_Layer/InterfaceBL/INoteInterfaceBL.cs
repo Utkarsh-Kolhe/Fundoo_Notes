@@ -18,5 +18,7 @@ namespace Bussiness_Layer.InterfaceBL
         public bool DeleteNote(int noteId);
 
         public int ArchiveUnarchiveNote(int noteId);
+
+        public int TrashUntrashNote(int noteId);
     }
 }

@@ -19,5 +19,7 @@ namespace Repository_Layer.InterfaceRL
         public bool DeleteNote(int noteId);
 
         public int ArchiveUnarchiveNote(int noteId);
+
+        public int TrashUntrashNote(int noteId);
     }
 }

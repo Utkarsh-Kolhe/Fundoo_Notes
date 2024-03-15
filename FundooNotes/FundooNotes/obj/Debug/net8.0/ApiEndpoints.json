@@ -129,6 +129,32 @@
     ]
   },
   {
+    "ContainingType": "FundooNotes.Controllers.NotesController",
+    "Method": "TrashUntrashNote",
+    "RelativePath": "api/Notes/trash",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "noteId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Model_Layer.Models.ResponseModel\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "FundooNotes.Controllers.UserController",
     "Method": "UserLogin",
     "RelativePath": "api/User/login",

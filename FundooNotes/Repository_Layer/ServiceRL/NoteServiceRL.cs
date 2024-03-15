@@ -100,5 +100,28 @@ namespace Repository_Layer.ServiceRL
             
             return 0; // 0 => note not found
         }
+
+        public int TrashUntrashNote(int noteId)
+        {
+            var Note = _fundooContext.Notes.FirstOrDefault(o => o.NoteId == noteId);
+            if (Note != null)
+            {
+                if (Note.IsDeleted)
+                {
+                    Note.IsDeleted = false;
+                    _fundooContext.SaveChanges();
+                    return 1; // 1 => note untrashed 
+                }
+                else
+                {
+                    Note.IsDeleted = true;
+                    _fundooContext.SaveChanges();
+                    return 2; // 2 => note trashed
+                }
+
+            }
+
+            return 0; // 0 => note not found
+        }
     }
 }

@@ -139,5 +139,32 @@ namespace FundooNotes.Controllers
             }
             return responseModel;
         }
+
+        [HttpPatch]
+        [Route("trash")]
+        [Authorize]
+        public ResponseModel<string> TrashUntrashNote(int noteId)
+        {
+            var responseModel = new ResponseModel<string>();
+
+            int result = _noteInterfaceBL.TrashUntrashNote(noteId);
+
+            if (result == 1)
+            {
+                responseModel.Success = true;
+                responseModel.Message = "Note untrash successfully.";
+            }
+            else if (result == 2)
+            {
+                responseModel.Success = true;
+                responseModel.Message = "Note trash successfully.";
+            }
+            else
+            {
+                responseModel.Success = false;
+                responseModel.Message = "Note not found";
+            }
+            return responseModel;
+        }
     }
 }

@@ -12,5 +12,7 @@ namespace Bussiness_Layer.InterfaceBL
         public bool AddNewUser(UserRegistrationModel model);
 
         public string UserLogin(UserLoginModel model);
+
+        
     }
 }
