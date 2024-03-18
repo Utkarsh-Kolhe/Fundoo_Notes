@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Model_Layer.Models;
+using Repository_Layer.Entity;
 using System.Security.Claims;
 
 namespace FundooNotes.Controllers
@@ -39,6 +40,28 @@ namespace FundooNotes.Controllers
                 responseModel.Success = false;
                 responseModel.Message = "Error While Adding Collaborator! Please try again.";
             }
+            return responseModel;
+        }
+
+        [HttpGet]
+        [Authorize]
+        public ResponseModel<List<CollaboratorEntity>> ViewCollaborators(int noteId)
+        {
+            var data = _collaborator.ViewCollaborators(noteId);
+
+            ResponseModel<List<CollaboratorEntity>> responseModel = new ResponseModel<List<CollaboratorEntity>>();
+
+            if(data.Count != 0)
+            {
+                responseModel.Message = "Collaborator email retrived successfully.";
+                responseModel.Data = data;
+            }
+            else
+            {
+                responseModel.Success = false;
+                responseModel.Message = "Error while retriving the collaborator email.";
+            }
+
             return responseModel;
         }
     }

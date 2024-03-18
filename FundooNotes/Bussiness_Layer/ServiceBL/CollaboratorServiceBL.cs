@@ -1,5 +1,6 @@
 ﻿using Bussiness_Layer.InterfaceBL;
 using Model_Layer.Models;
+using Repository_Layer.Entity;
 using Repository_Layer.InterfaceRL;
 using System;
 using System.Collections.Generic;
@@ -22,5 +23,12 @@ namespace Bussiness_Layer.ServiceBL
         {
             return _collaboratorInterfaceRL.AddCollaborator(model, userId);
         }
+
+        public List<CollaboratorEntity> ViewCollaborators(int noteId)
+        {
+            return _collaboratorInterfaceRL.ViewCollaborators(noteId);
+        }
+
+        
     }
 }

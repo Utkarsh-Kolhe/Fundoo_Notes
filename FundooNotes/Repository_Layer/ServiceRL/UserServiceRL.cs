@@ -42,15 +42,10 @@ namespace Repository_Layer.ServiceRL
                 userRegistration.Email = model.Email;
                 userRegistration.Password = password;
 
-                UserLoginEntity userLogin = new UserLoginEntity();
-                userLogin.Email = model.Email;
-                userLogin.Password = password;
-
                 _context.Registrations_Details.Add(userRegistration);
-                _context.Login_Details.Add(userLogin);
                 _context.SaveChanges();
 
-                return true; // true => successfully registered.
+                return true;
             }
         }
 
@@ -69,7 +64,7 @@ namespace Repository_Layer.ServiceRL
 
         public string UserLogin(UserLoginModel model)
         {
-            var user = _context.Login_Details.FirstOrDefault(r => r.Email == model.Email);
+            var user = _context.Registrations_Details.FirstOrDefault(r => r.Email == model.Email);
 
             bool validUser = false;
 

@@ -21,7 +21,7 @@ namespace Repository_Layer.ServiceRL
 
         public bool AddCollaborator(CollaboratorModel model, int userId)
         {
-            CollabratorEntity collabratorEntity = new CollabratorEntity();
+            CollaboratorEntity collabratorEntity = new CollaboratorEntity();
             collabratorEntity.Collaborator_Email = model.Email;
             collabratorEntity.NoteId = model.NoteId;
             collabratorEntity.UserId = userId;
@@ -29,6 +29,12 @@ namespace Repository_Layer.ServiceRL
             _fundooContext.Add(collabratorEntity);
             _fundooContext.SaveChanges();
             return true;
+        }
+
+        public List<CollaboratorEntity> ViewCollaborators(int noteId)
+        {
+            List<CollaboratorEntity> collaboratorList = _fundooContext.Collaborators.Where(e =>  e.NoteId == noteId).ToList();
+            return collaboratorList;
         }
     }
 }

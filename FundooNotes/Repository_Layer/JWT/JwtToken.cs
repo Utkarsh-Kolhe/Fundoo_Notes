@@ -19,7 +19,7 @@ namespace Repository_Layer.JWT
             _config = config;
         }
 
-        public string GenerateToken(UserLoginEntity user)
+        public string GenerateToken(UserRegistrationEntity user)
         {
 
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));

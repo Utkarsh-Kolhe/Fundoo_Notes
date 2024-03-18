@@ -17,8 +17,7 @@ namespace Repository_Layer.ContextClass
         }
 
         public DbSet<UserRegistrationEntity> Registrations_Details { get; set; }
-        public DbSet<UserLoginEntity> Login_Details { get; set; }
         public DbSet<NotesEntity> Notes { get; set; }
-        public DbSet<CollabratorEntity> Collaborators { get; set; }
+        public DbSet<CollaboratorEntity> Collaborators { get; set; }
     }
 }

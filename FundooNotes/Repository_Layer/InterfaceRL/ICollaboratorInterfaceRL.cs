@@ -1,4 +1,5 @@
 ﻿using Model_Layer.Models;
+using Repository_Layer.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,8 @@ namespace Repository_Layer.InterfaceRL
     public interface ICollaboratorInterfaceRL
     {
         public bool AddCollaborator(CollaboratorModel model, int userId);
+
+        public List<CollaboratorEntity> ViewCollaborators(int noteId);
+
     }
 }
