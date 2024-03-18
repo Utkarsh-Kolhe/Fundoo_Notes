@@ -52,6 +52,8 @@ builder.Services.AddScoped<IUserInterfaceBL, UserServiceBL>();
 builder.Services.AddScoped<IUserInterfaceRL, UserServiceRL>();
 builder.Services.AddScoped<INoteInterfaceBL, NoteServiceBL>();
 builder.Services.AddScoped<INoteInterfaceRL, NoteServiceRL>();
+builder.Services.AddScoped<ICollaboratorInterfaceBL, CollaboratorServiceBL>();
+builder.Services.AddScoped<ICollaboratorInterfaceRL, CollaboratorServiceRL>();
 builder.Services.AddScoped<HashingPassword>();
 
 //Jwt

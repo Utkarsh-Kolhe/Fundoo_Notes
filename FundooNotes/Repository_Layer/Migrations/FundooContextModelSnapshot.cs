@@ -21,28 +21,34 @@ namespace Repository_Layer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Repository_Layer.Entity.UserLogin", b =>
+            modelBuilder.Entity("Repository_Layer.Entity.CollabratorEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("Collaborator_Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Collaborator_Id"));
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Collaborator_Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("NoteId")
+                        .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
-                    b.ToTable("Login_Details");
+                    b.HasKey("Collaborator_Id");
+
+                    b.HasIndex("NoteId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Collaborators");
                 });
 
-            modelBuilder.Entity("Repository_Layer.Entity.UserNotes", b =>
+            modelBuilder.Entity("Repository_Layer.Entity.NotesEntity", b =>
                 {
                     b.Property<int>("NoteId")
                         .ValueGeneratedOnAdd()
@@ -78,7 +84,28 @@ namespace Repository_Layer.Migrations
                     b.ToTable("Notes");
                 });
 
-            modelBuilder.Entity("Repository_Layer.Entity.UserRegistration", b =>
+            modelBuilder.Entity("Repository_Layer.Entity.UserLoginEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Login_Details");
+                });
+
+            modelBuilder.Entity("Repository_Layer.Entity.UserRegistrationEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -107,9 +134,28 @@ namespace Repository_Layer.Migrations
                     b.ToTable("Registrations_Details");
                 });
 
-            modelBuilder.Entity("Repository_Layer.Entity.UserNotes", b =>
+            modelBuilder.Entity("Repository_Layer.Entity.CollabratorEntity", b =>
                 {
-                    b.HasOne("Repository_Layer.Entity.UserRegistration", "Registrations_Details")
+                    b.HasOne("Repository_Layer.Entity.NotesEntity", "Notes")
+                        .WithMany()
+                        .HasForeignKey("NoteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Repository_Layer.Entity.UserRegistrationEntity", "Registrations_Details")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Notes");
+
+                    b.Navigation("Registrations_Details");
+                });
+
+            modelBuilder.Entity("Repository_Layer.Entity.NotesEntity", b =>
+                {
+                    b.HasOne("Repository_Layer.Entity.UserRegistrationEntity", "Registrations_Details")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
