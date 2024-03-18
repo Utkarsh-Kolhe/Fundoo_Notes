@@ -14,6 +14,6 @@ namespace Bussiness_Layer.InterfaceBL
 
         public List<CollaboratorEntity> ViewCollaborators(int noteId);
 
-        
+        public bool DeleteCollaborators(int noteId, string email);
     }
 }

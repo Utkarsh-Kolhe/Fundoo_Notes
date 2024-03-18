@@ -64,5 +64,26 @@ namespace FundooNotes.Controllers
 
             return responseModel;
         }
+
+
+        [HttpDelete]
+        [Authorize]
+        public ResponseModel<string> DeleteCollaborator(int noteId, string email)
+        {
+            var responseModel = new ResponseModel<string>();
+            var data = _collaborator.DeleteCollaborators(noteId, email);
+            if (data)
+            {
+                responseModel.Message = "Collaborator deleted successfully.";
+                responseModel.Data = email;
+            }
+            else
+            {
+                responseModel.Success = false;
+                responseModel.Message = "Error while deleteing the collaborator.";
+            }
+
+            return responseModel;
+        }
     }
 }

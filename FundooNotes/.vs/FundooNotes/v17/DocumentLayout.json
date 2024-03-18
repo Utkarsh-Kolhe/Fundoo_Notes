@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "D:\\C# Repository\\FundooNotes\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D20E927E-9D92-41CA-A46B-BC28F52DCD8F}|FundooNotes\\FundooNotes.csproj|d:\\c# repository\\fundoonotes\\fundoonotes\\controllers\\collaboratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20E927E-9D92-41CA-A46B-BC28F52DCD8F}|FundooNotes\\FundooNotes.csproj|solutionrelative:fundoonotes\\controllers\\collaboratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A20092C-BB5F-4EDB-B8C8-D86AF1675448}|Bussiness_Layer\\Bussiness_Layer.csproj|d:\\c# repository\\fundoonotes\\bussiness_layer\\servicebl\\collaboratorservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A20092C-BB5F-4EDB-B8C8-D86AF1675448}|Bussiness_Layer\\Bussiness_Layer.csproj|solutionrelative:bussiness_layer\\servicebl\\collaboratorservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A20092C-BB5F-4EDB-B8C8-D86AF1675448}|Bussiness_Layer\\Bussiness_Layer.csproj|d:\\c# repository\\fundoonotes\\bussiness_layer\\interfacebl\\icollaboratorinterfacebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A20092C-BB5F-4EDB-B8C8-D86AF1675448}|Bussiness_Layer\\Bussiness_Layer.csproj|solutionrelative:bussiness_layer\\interfacebl\\icollaboratorinterfacebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|d:\\c# repository\\fundoonotes\\repository_layer\\interfacerl\\icollaboratorinterfacerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|solutionrelative:repository_layer\\interfacerl\\icollaboratorinterfacerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|d:\\c# repository\\fundoonotes\\repository_layer\\servicerl\\collaboratorservicerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|solutionrelative:repository_layer\\servicerl\\collaboratorservicerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|d:\\c# repository\\fundoonotes\\repository_layer\\servicerl\\userservicerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|solutionrelative:repository_layer\\servicerl\\userservicerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|d:\\c# repository\\fundoonotes\\repository_layer\\servicerl\\noteservicerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|solutionrelative:repository_layer\\servicerl\\noteservicerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|d:\\c# repository\\fundoonotes\\repository_layer\\servicerl\\collaboratorservicerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|solutionrelative:repository_layer\\servicerl\\collaboratorservicerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50B9D543-52A8-4685-98A2-9CF355EC06C8}|Model_Layer\\Model_Layer.csproj|d:\\c# repository\\fundoonotes\\model_layer\\models\\collaboratormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,24 +63,8 @@
       "RelativeMoniker": "D:0:0:{D20E927E-9D92-41CA-A46B-BC28F52DCD8F}|FundooNotes\\FundooNotes.csproj|solutionrelative:fundoonotes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D20E927E-9D92-41CA-A46B-BC28F52DCD8F}|FundooNotes\\FundooNotes.csproj|d:\\c# repository\\fundoonotes\\fundoonotes\\controllers\\collaboratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D20E927E-9D92-41CA-A46B-BC28F52DCD8F}|FundooNotes\\FundooNotes.csproj|solutionrelative:fundoonotes\\controllers\\collaboratorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D20E927E-9D92-41CA-A46B-BC28F52DCD8F}|FundooNotes\\FundooNotes.csproj|d:\\c# repository\\fundoonotes\\fundoonotes\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D20E927E-9D92-41CA-A46B-BC28F52DCD8F}|FundooNotes\\FundooNotes.csproj|solutionrelative:fundoonotes\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|d:\\c# repository\\fundoonotes\\repository_layer\\interfacerl\\icollaboratorinterfacerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|solutionrelative:repository_layer\\interfacerl\\icollaboratorinterfacerl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A20092C-BB5F-4EDB-B8C8-D86AF1675448}|Bussiness_Layer\\Bussiness_Layer.csproj|d:\\c# repository\\fundoonotes\\bussiness_layer\\interfacebl\\icollaboratorinterfacebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A20092C-BB5F-4EDB-B8C8-D86AF1675448}|Bussiness_Layer\\Bussiness_Layer.csproj|solutionrelative:bussiness_layer\\interfacebl\\icollaboratorinterfacebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A20092C-BB5F-4EDB-B8C8-D86AF1675448}|Bussiness_Layer\\Bussiness_Layer.csproj|d:\\c# repository\\fundoonotes\\bussiness_layer\\servicebl\\collaboratorservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A20092C-BB5F-4EDB-B8C8-D86AF1675448}|Bussiness_Layer\\Bussiness_Layer.csproj|solutionrelative:bussiness_layer\\servicebl\\collaboratorservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{626AB4E5-725B-4B49-9EDF-4F929C1021EF}|Repository_Layer\\Repository_Layer.csproj|d:\\c# repository\\fundoonotes\\repository_layer\\entity\\collaboratorentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -134,11 +134,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\FundooNotes\\Program.cs",
               "RelativeDocumentMoniker": "FundooNotes\\Program.cs",
@@ -147,77 +147,11 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-04T11:21:51.063Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CollaboratorServiceRL.cs",
-              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ServiceRL\\CollaboratorServiceRL.cs",
-              "RelativeDocumentMoniker": "Repository_Layer\\ServiceRL\\CollaboratorServiceRL.cs",
-              "ToolTip": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ServiceRL\\CollaboratorServiceRL.cs",
-              "RelativeToolTip": "Repository_Layer\\ServiceRL\\CollaboratorServiceRL.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwCUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T11:50:25.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FundooContext.cs",
-              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ContextClass\\FundooContext.cs",
-              "RelativeDocumentMoniker": "Repository_Layer\\ContextClass\\FundooContext.cs",
-              "ToolTip": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ContextClass\\FundooContext.cs",
-              "RelativeToolTip": "Repository_Layer\\ContextClass\\FundooContext.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T11:12:26.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NotesEntity.cs",
-              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\Entity\\NotesEntity.cs",
-              "RelativeDocumentMoniker": "Repository_Layer\\Entity\\NotesEntity.cs",
-              "ToolTip": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\Entity\\NotesEntity.cs",
-              "RelativeToolTip": "Repository_Layer\\Entity\\NotesEntity.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T10:29:15.852Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CollaboratorModel.cs",
-              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Model_Layer\\Models\\CollaboratorModel.cs",
-              "RelativeDocumentMoniker": "Model_Layer\\Models\\CollaboratorModel.cs",
-              "ToolTip": "D:\\C# Repository\\FundooNotes\\Model_Layer\\Models\\CollaboratorModel.cs",
-              "RelativeToolTip": "Model_Layer\\Models\\CollaboratorModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T11:43:23.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NoteServiceRL.cs",
-              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ServiceRL\\NoteServiceRL.cs",
-              "RelativeDocumentMoniker": "Repository_Layer\\ServiceRL\\NoteServiceRL.cs",
-              "ToolTip": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ServiceRL\\NoteServiceRL.cs",
-              "RelativeToolTip": "Repository_Layer\\ServiceRL\\NoteServiceRL.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAYwGcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:34:51.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "UserServiceRL.cs",
               "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ServiceRL\\UserServiceRL.cs",
               "RelativeDocumentMoniker": "Repository_Layer\\ServiceRL\\UserServiceRL.cs",
@@ -230,7 +164,72 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ICollaboratorInterfaceRL.cs",
+              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\InterfaceRL\\ICollaboratorInterfaceRL.cs",
+              "RelativeDocumentMoniker": "Repository_Layer\\InterfaceRL\\ICollaboratorInterfaceRL.cs",
+              "ToolTip": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\InterfaceRL\\ICollaboratorInterfaceRL.cs",
+              "RelativeToolTip": "Repository_Layer\\InterfaceRL\\ICollaboratorInterfaceRL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T11:49:23.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICollaboratorInterfaceBL.cs",
+              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Bussiness_Layer\\InterfaceBL\\ICollaboratorInterfaceBL.cs",
+              "RelativeDocumentMoniker": "Bussiness_Layer\\InterfaceBL\\ICollaboratorInterfaceBL.cs",
+              "ToolTip": "D:\\C# Repository\\FundooNotes\\Bussiness_Layer\\InterfaceBL\\ICollaboratorInterfaceBL.cs",
+              "RelativeToolTip": "Bussiness_Layer\\InterfaceBL\\ICollaboratorInterfaceBL.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T11:52:04.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CollaboratorServiceBL.cs",
+              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Bussiness_Layer\\ServiceBL\\CollaboratorServiceBL.cs",
+              "RelativeDocumentMoniker": "Bussiness_Layer\\ServiceBL\\CollaboratorServiceBL.cs",
+              "ToolTip": "D:\\C# Repository\\FundooNotes\\Bussiness_Layer\\ServiceBL\\CollaboratorServiceBL.cs",
+              "RelativeToolTip": "Bussiness_Layer\\ServiceBL\\CollaboratorServiceBL.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAgwCIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T11:52:56.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CollaboratorController.cs",
+              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\FundooNotes\\Controllers\\CollaboratorController.cs",
+              "RelativeDocumentMoniker": "FundooNotes\\Controllers\\CollaboratorController.cs",
+              "ToolTip": "D:\\C# Repository\\FundooNotes\\FundooNotes\\Controllers\\CollaboratorController.cs",
+              "RelativeToolTip": "FundooNotes\\Controllers\\CollaboratorController.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAkwEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T11:46:27.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CollaboratorServiceRL.cs",
+              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ServiceRL\\CollaboratorServiceRL.cs",
+              "RelativeDocumentMoniker": "Repository_Layer\\ServiceRL\\CollaboratorServiceRL.cs",
+              "ToolTip": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ServiceRL\\CollaboratorServiceRL.cs",
+              "RelativeToolTip": "Repository_Layer\\ServiceRL\\CollaboratorServiceRL.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwCcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T11:50:25.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "JwtToken.cs",
               "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\JWT\\JwtToken.cs",
               "RelativeDocumentMoniker": "Repository_Layer\\JWT\\JwtToken.cs",
@@ -238,12 +237,59 @@
               "RelativeToolTip": "Repository_Layer\\JWT\\JwtToken.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAYwBUAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T06:05:21.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T06:05:21.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NoteServiceRL.cs",
+              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ServiceRL\\NoteServiceRL.cs",
+              "RelativeDocumentMoniker": "Repository_Layer\\ServiceRL\\NoteServiceRL.cs",
+              "ToolTip": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ServiceRL\\NoteServiceRL.cs",
+              "RelativeToolTip": "Repository_Layer\\ServiceRL\\NoteServiceRL.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwGcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T12:34:51.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CollaboratorModel.cs",
+              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Model_Layer\\Models\\CollaboratorModel.cs",
+              "RelativeDocumentMoniker": "Model_Layer\\Models\\CollaboratorModel.cs",
+              "ToolTip": "D:\\C# Repository\\FundooNotes\\Model_Layer\\Models\\CollaboratorModel.cs",
+              "RelativeToolTip": "Model_Layer\\Models\\CollaboratorModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T11:43:23.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NotesEntity.cs",
+              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\Entity\\NotesEntity.cs",
+              "RelativeDocumentMoniker": "Repository_Layer\\Entity\\NotesEntity.cs",
+              "ToolTip": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\Entity\\NotesEntity.cs",
+              "RelativeToolTip": "Repository_Layer\\Entity\\NotesEntity.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T10:29:15.852Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "FundooContext.cs",
+              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ContextClass\\FundooContext.cs",
+              "RelativeDocumentMoniker": "Repository_Layer\\ContextClass\\FundooContext.cs",
+              "ToolTip": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\ContextClass\\FundooContext.cs",
+              "RelativeToolTip": "Repository_Layer\\ContextClass\\FundooContext.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T11:12:26.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\FundooNotes\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "FundooNotes\\Properties\\launchSettings.json",
@@ -251,12 +297,11 @@
               "RelativeToolTip": "FundooNotes\\Properties\\launchSettings.json",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-18T06:50:42.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-18T06:50:42.69Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "FundooNotes.http",
               "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\FundooNotes\\FundooNotes.http",
               "RelativeDocumentMoniker": "FundooNotes\\FundooNotes.http",
@@ -264,12 +309,11 @@
               "RelativeToolTip": "FundooNotes\\FundooNotes.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-03-18T06:47:24.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-18T06:47:24.206Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "NotesController.cs",
               "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\FundooNotes\\Controllers\\NotesController.cs",
               "RelativeDocumentMoniker": "FundooNotes\\Controllers\\NotesController.cs",
@@ -277,38 +321,11 @@
               "RelativeToolTip": "FundooNotes\\Controllers\\NotesController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:26:19.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ICollaboratorInterfaceRL.cs",
-              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\InterfaceRL\\ICollaboratorInterfaceRL.cs",
-              "RelativeDocumentMoniker": "Repository_Layer\\InterfaceRL\\ICollaboratorInterfaceRL.cs",
-              "ToolTip": "D:\\C# Repository\\FundooNotes\\Repository_Layer\\InterfaceRL\\ICollaboratorInterfaceRL.cs",
-              "RelativeToolTip": "Repository_Layer\\InterfaceRL\\ICollaboratorInterfaceRL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T11:49:23.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:26:19.674Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "ICollaboratorInterfaceBL.cs",
-              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Bussiness_Layer\\InterfaceBL\\ICollaboratorInterfaceBL.cs",
-              "RelativeDocumentMoniker": "Bussiness_Layer\\InterfaceBL\\ICollaboratorInterfaceBL.cs",
-              "ToolTip": "D:\\C# Repository\\FundooNotes\\Bussiness_Layer\\InterfaceBL\\ICollaboratorInterfaceBL.cs",
-              "RelativeToolTip": "Bussiness_Layer\\InterfaceBL\\ICollaboratorInterfaceBL.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABAAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T11:52:04.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\FundooNotes\\appsettings.json",
               "RelativeDocumentMoniker": "FundooNotes\\appsettings.json",
@@ -316,34 +333,7 @@
               "RelativeToolTip": "FundooNotes\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-04T11:05:53.836Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CollaboratorController.cs",
-              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\FundooNotes\\Controllers\\CollaboratorController.cs",
-              "RelativeDocumentMoniker": "FundooNotes\\Controllers\\CollaboratorController.cs",
-              "ToolTip": "D:\\C# Repository\\FundooNotes\\FundooNotes\\Controllers\\CollaboratorController.cs",
-              "RelativeToolTip": "FundooNotes\\Controllers\\CollaboratorController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T11:46:27.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CollaboratorServiceBL.cs",
-              "DocumentMoniker": "D:\\C# Repository\\FundooNotes\\Bussiness_Layer\\ServiceBL\\CollaboratorServiceBL.cs",
-              "RelativeDocumentMoniker": "Bussiness_Layer\\ServiceBL\\CollaboratorServiceBL.cs",
-              "ToolTip": "D:\\C# Repository\\FundooNotes\\Bussiness_Layer\\ServiceBL\\CollaboratorServiceBL.cs",
-              "RelativeToolTip": "Bussiness_Layer\\ServiceBL\\CollaboratorServiceBL.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAgwB8AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T11:52:56.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-04T11:05:53.836Z"
             },
             {
               "$type": "Document",
@@ -355,8 +345,7 @@
               "RelativeToolTip": "Repository_Layer\\Entity\\CollaboratorEntity.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAYwB4AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T08:42:32.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-15T08:42:32.524Z"
             },
             {
               "$type": "Document",

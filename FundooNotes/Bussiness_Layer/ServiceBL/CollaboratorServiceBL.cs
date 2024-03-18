@@ -29,6 +29,9 @@ namespace Bussiness_Layer.ServiceBL
             return _collaboratorInterfaceRL.ViewCollaborators(noteId);
         }
 
-        
+        public bool DeleteCollaborators(int noteId, string email)
+        {
+            return _collaboratorInterfaceRL.DeleteCollaborators(noteId, email);
+        }
     }
 }

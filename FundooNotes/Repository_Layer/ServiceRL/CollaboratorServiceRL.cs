@@ -36,5 +36,17 @@ namespace Repository_Layer.ServiceRL
             List<CollaboratorEntity> collaboratorList = _fundooContext.Collaborators.Where(e =>  e.NoteId == noteId).ToList();
             return collaboratorList;
         }
+
+        public bool DeleteCollaborators(int noteId, string email)
+        {
+            var data = _fundooContext.Collaborators.FirstOrDefault(e => e.NoteId == noteId && e.Collaborator_Email == email);
+            if (data != null)
+            {
+                _fundooContext.Collaborators.Remove(data);
+                _fundooContext.SaveChanges();
+                return true;
+            }
+            return false;
+        }
     }
 }
