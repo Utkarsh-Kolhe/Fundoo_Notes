@@ -27,5 +27,16 @@ namespace Bussiness_Layer.ServiceBL
         {
             return _userInterfaceRL.UserLogin(model);
         }
+
+        public Task<string> Forget_Password(string email)
+        {
+            return _userInterfaceRL.Forget_Password(email);
+        }
+
+
+        public bool PasswordReset(string newPassword, int userId)
+        {
+            return _userInterfaceRL.PasswordReset(newPassword, userId);
+        }
     }
 }

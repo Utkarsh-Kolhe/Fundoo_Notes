@@ -36,9 +36,33 @@ namespace Repository_Layer.JWT
                 _config["Jwt:Issuer"],
                 _config["Jwt:Audience"],
                 claims,
-                expires: DateTime.Now.AddMinutes(15),
+                expires: DateTime.Now.AddMinutes(30),
                 signingCredentials: credentials
             );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        public string GenerateTokenReset(string email, int userId)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            //Initializing an array of Claim type objects
+            var claims = new[]
+            {
+
+               new Claim("Email",email),                   //Creating Claim object that would get stored in Jwt payload
+               new Claim("UserId",userId.ToString()),
+
+
+            };
+
+            var token = new JwtSecurityToken(_config["Jwt:Issuer"],
+              _config["Jwt:Issuer"],
+              claims,
+              expires: DateTime.Now.AddMinutes(30),
+              signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }

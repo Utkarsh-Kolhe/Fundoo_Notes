@@ -13,5 +13,9 @@ namespace Repository_Layer.InterfaceRL
         public bool AddNewUser(UserRegistrationModel model);
 
         public string UserLogin(UserLoginModel model);
+
+        public Task<string> Forget_Password(string email);
+
+        public bool PasswordReset(string newPassword, int userId);
     }
 }
