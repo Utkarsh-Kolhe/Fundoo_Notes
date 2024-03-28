@@ -77,7 +77,7 @@ namespace FundooNotes.Controllers
                 }
                 else
                 {
-                    response.Message = "Notes retrive successfully from database.";
+                    response.Message = "Notes retrive successfully.";
                     response.Data = noteList;
                 }
             }
