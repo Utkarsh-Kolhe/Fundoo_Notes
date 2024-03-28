@@ -33,19 +33,19 @@ namespace Bussiness_Layer.ServiceBL
             return _noteRL.EditNote(noteId, userId, model);
         }
 
-        public bool DeleteNote(int noteId)
+        public bool DeleteNote(int noteId, int userId)
         {
-            return _noteRL.DeleteNote(noteId);
+            return _noteRL.DeleteNote(noteId, userId);
         }
 
-        public int ArchiveUnarchiveNote(int noteId)
+        public int ArchiveUnarchiveNote(int noteId, int userId)
         {
-            return _noteRL.ArchiveUnarchiveNote(noteId);
+            return _noteRL.ArchiveUnarchiveNote(noteId, userId);
         }
 
-        public int TrashUntrashNote(int noteId)
+        public int TrashUntrashNote(int noteId, int userId)
         {
-            return _noteRL.TrashUntrashNote(noteId);
+            return _noteRL.TrashUntrashNote(noteId, userId);
         }
     }
 }

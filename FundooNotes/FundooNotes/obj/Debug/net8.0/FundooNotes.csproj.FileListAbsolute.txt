@@ -141,3 +141,9 @@ D:\C# Repository\FundooNotes\FundooNotes\bin\Debug\net8.0\Model_Layer.dll
 D:\C# Repository\FundooNotes\FundooNotes\bin\Debug\net8.0\Bussiness_Layer.pdb
 D:\C# Repository\FundooNotes\FundooNotes\bin\Debug\net8.0\Model_Layer.pdb
 D:\C# Repository\FundooNotes\FundooNotes\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\C# Repository\FundooNotes\FundooNotes\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\C# Repository\FundooNotes\FundooNotes\bin\Debug\net8.0\StackExchange.Redis.dll
+D:\C# Repository\FundooNotes\FundooNotes\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\C# Repository\FundooNotes\FundooNotes\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\C# Repository\FundooNotes\FundooNotes\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\C# Repository\FundooNotes\FundooNotes\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

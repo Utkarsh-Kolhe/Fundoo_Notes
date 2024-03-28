@@ -11,6 +11,7 @@ using Repository_Layer.Hashing;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Repository_Layer.JWT;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Caching.Distributed;
 
 namespace Repository_Layer.ServiceRL
 {

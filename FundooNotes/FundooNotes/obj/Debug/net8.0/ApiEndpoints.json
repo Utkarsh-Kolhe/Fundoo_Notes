@@ -240,7 +240,7 @@
   {
     "ContainingType": "FundooNotes.Controllers.UserController",
     "Method": "ForgotPassword",
-    "RelativePath": "api/User/ForgetPassword",
+    "RelativePath": "api/User/forgetpassword",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -318,7 +318,7 @@
   {
     "ContainingType": "FundooNotes.Controllers.UserController",
     "Method": "ResetPassword",
-    "RelativePath": "api/User/ResetPassword",
+    "RelativePath": "api/User/resetpassword",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
