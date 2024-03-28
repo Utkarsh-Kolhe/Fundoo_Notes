@@ -80,7 +80,7 @@ namespace FundooNotes.Controllers
             return responseModel;
         }
 
-        [HttpPost("ForgetPassword")]
+        [HttpPost("forgetpassword")]
 
         public async Task<ResponseModel<string>> ForgotPassword(string email)
         {
@@ -101,7 +101,7 @@ namespace FundooNotes.Controllers
             return response;
         }
 
-        [HttpPost("ResetPassword")]
+        [HttpPost("resetpassword")]
 
         public ResponseModel<bool> ResetPassword(string token, string password)
         {

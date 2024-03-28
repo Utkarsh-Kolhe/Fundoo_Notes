@@ -16,10 +16,10 @@ namespace Repository_Layer.InterfaceRL
 
         public bool EditNote(int noteId, int userId, NotesModel model);
 
-        public bool DeleteNote(int noteId);
+        public bool DeleteNote(int noteId, int userId);
 
-        public int ArchiveUnarchiveNote(int noteId);
+        public int ArchiveUnarchiveNote(int noteId, int userId);
 
-        public int TrashUntrashNote(int noteId);
+        public int TrashUntrashNote(int noteId, int userId);
     }
 }
