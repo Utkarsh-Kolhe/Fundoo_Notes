@@ -59,7 +59,7 @@ namespace FundooNotes.Controllers
             else
             {
                 responseModel.Success = false;
-                responseModel.Message = "Error while retriving the collaborator email.";
+                responseModel.Message = "There is no collaborator.";
             }
 
             return responseModel;
@@ -80,7 +80,7 @@ namespace FundooNotes.Controllers
             else
             {
                 responseModel.Success = false;
-                responseModel.Message = "Error while deleteing the collaborator.";
+                responseModel.Message = "There is no such a note.";
             }
 
             return responseModel;

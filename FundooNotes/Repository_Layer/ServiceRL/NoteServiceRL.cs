@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using Microsoft.Extensions.Caching.Distributed;
 
+
 namespace Repository_Layer.ServiceRL
 {
     public class NoteServiceRL : INoteInterfaceRL
@@ -44,7 +45,7 @@ namespace Repository_Layer.ServiceRL
             _cache.SetString(Convert.ToString(userNote.NoteId), JsonSerializer.Serialize(userNote)); // adding data in cache memory
 
             var cacheResult = _cache.GetString(Convert.ToString(id));                          //Getting the list of notes stored by user in cache(with userId)
-
+            
             if (cacheResult == null)
             {
                 List<NotesEntity> noteList = new List<NotesEntity> { userNote };
