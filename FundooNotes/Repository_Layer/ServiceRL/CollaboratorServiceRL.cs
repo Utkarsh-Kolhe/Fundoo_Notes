@@ -33,29 +33,21 @@ namespace Repository_Layer.ServiceRL
             _fundooContext.Add(collabratorEntity);
             _fundooContext.SaveChanges();
 
-            _cache.SetString(Convert.ToString(collabratorEntity.Collaborator_Id), JsonSerializer.Serialize(collabratorEntity));
-
-            var cacheResult = _cache.GetString(Convert.ToString(model.NoteId));
+            string collaboratorKey = Convert.ToString(userId) + Convert.ToString(model.NoteId);
+            
+            var cacheResult = _cache.GetString(collaboratorKey);
             
             if (cacheResult == null)
             {
                 List<CollaboratorEntity> collaboratorsList = new List<CollaboratorEntity>() { collabratorEntity };
 
-                _cache.SetString(Convert.ToString(model.NoteId), JsonSerializer.Serialize(collaboratorsList));
+                _cache.SetString(collaboratorKey, JsonSerializer.Serialize(collaboratorsList));
             }
             else
             {
                 var collaboratorsList = JsonSerializer.Deserialize<List<CollaboratorEntity>>(cacheResult);
-
-                if (collaboratorsList != null)
-                {
-                    collaboratorsList.Add(collabratorEntity);
-                }
-                else
-                {
-                    return false;
-                }
-
+                collaboratorsList.Add(collabratorEntity);
+                _cache.SetString(collaboratorKey, JsonSerializer.Serialize(collaboratorsList));
             }
 
             return true;
@@ -63,25 +55,17 @@ namespace Repository_Layer.ServiceRL
 
         public List<CollaboratorEntity> ViewCollaborators(int noteId)
         {
-            var cacheResult = _cache.GetString(Convert.ToString(noteId));
-            if (cacheResult != null)
-            {
-                var cachecollaboratorList = JsonSerializer.Deserialize<List<CollaboratorEntity>>(cacheResult);
-                return cachecollaboratorList;
-            }
-            else
-            {
                 List<CollaboratorEntity> collaboratorList = _fundooContext.Collaborators.Where(e => e.NoteId == noteId).ToList();
                 return collaboratorList;
-            }
-
         }
 
-        public bool DeleteCollaborators(int noteId, string email)
+        public bool DeleteCollaborators(int userId, int noteId, string email)
         {
             var data = _fundooContext.Collaborators.FirstOrDefault(e => e.NoteId == noteId && e.Collaborator_Email == email);
 
-            var cacheResult = _cache.GetString(Convert.ToString(noteId));
+            string collaboratorKey = Convert.ToString(userId) + Convert.ToString(noteId);
+
+            var cacheResult = _cache.GetString(collaboratorKey);
             var cacheCollaboratorList = JsonSerializer.Deserialize<List<CollaboratorEntity>>(cacheResult);
             var cacheData = cacheCollaboratorList.Find(e => e.NoteId == noteId && e.Collaborator_Email == email);
 
@@ -91,7 +75,7 @@ namespace Repository_Layer.ServiceRL
                 _fundooContext.SaveChanges();
 
                 cacheCollaboratorList.Remove(cacheData);
-                _cache.SetString(Convert.ToString(noteId), JsonSerializer.Serialize(cacheCollaboratorList));
+                _cache.SetString(collaboratorKey, JsonSerializer.Serialize(cacheCollaboratorList));
                 return true;
             }
             return false;

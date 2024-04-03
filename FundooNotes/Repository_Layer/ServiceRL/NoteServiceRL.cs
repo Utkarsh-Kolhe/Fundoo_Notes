@@ -28,7 +28,7 @@ namespace Repository_Layer.ServiceRL
             _fundooContext = fundooContext;
             _cache = cache;
         }
-        public bool AddNote(NotesModel model, int id)
+        public bool AddNote(NotesModel model, int userId)
         {
 
             NotesEntity userNote = new NotesEntity();
@@ -37,54 +37,43 @@ namespace Repository_Layer.ServiceRL
             userNote.Title = model.Title;
             userNote.Description = model.Description;
             userNote.Colour = model.Colour;
-            userNote.UserId = id;
+            userNote.UserId = userId;
 
             _fundooContext.Notes.Add(userNote);
             _fundooContext.SaveChanges();
 
-            _cache.SetString(Convert.ToString(userNote.NoteId), JsonSerializer.Serialize(userNote)); // adding data in cache memory
+            // Get the existing notes for the user from the cache
+            var existingNotesJson = _cache.GetString(Convert.ToString(userId));
 
-            var cacheResult = _cache.GetString(Convert.ToString(id));                          //Getting the list of notes stored by user in cache(with userId)
-            
-            if (cacheResult == null)
+            List<NotesEntity> userNotesList;
+
+            if (existingNotesJson != null)
             {
-                List<NotesEntity> noteList = new List<NotesEntity> { userNote };
+                // Deserialize existing notes
+                userNotesList = JsonSerializer.Deserialize<List<NotesEntity>>(existingNotesJson);
 
-                _cache.SetString(Convert.ToString(id), JsonSerializer.Serialize(noteList));   //Adding data in cache memory (noteid as key)
-
+                // Add the new note to the list
+                userNotesList.Add(userNote);
             }
             else
             {
-                var finalResult = JsonSerializer.Deserialize<List<NotesEntity>>(cacheResult);             //Deserializing the list
-                if (finalResult != null)
-                {
-                    finalResult.Add(userNote);                                                                 //Adding the latest created note to the list
-                }
-                else
-                {
-                    return false;
-                }
-                
-                _cache.SetString(Convert.ToString(id), JsonSerializer.Serialize(finalResult));          //Again reassigining the list to that particular userId with added note in cache (Userid as key)
+                // If no existing notes, create a new list with the current note
+                userNotesList = new List<NotesEntity>() { userNote };
             }
+
+            // Serialize the list of notes to JSON
+            var updatedNotesJson = JsonSerializer.Serialize(userNotesList);
+
+            // Store the updated list of notes in the cache
+            _cache.SetString(Convert.ToString(userId), updatedNotesJson);
 
             return true;
         }
 
         public List<NotesEntity> ViewNote(int id)
         {
-            var cacheResponse = _cache.GetString(Convert.ToString(id));            //checking if the data is present in cache
-
-            if (cacheResponse != null)
-            {
-                var noteList = JsonSerializer.Deserialize<List<NotesEntity>>(cacheResponse);         //deserializing the data
-                return noteList;
-            }
-            else
-            {
-                var noteList = _fundooContext.Notes.Where(e => e.UserId == id).ToList();
-                return noteList;
-            }
+            var noteList = _fundooContext.Notes.Where(e => e.UserId == id).ToList();
+            return noteList;
         }
 
         public bool EditNote(int noteId, int userId, NotesModel model)
