@@ -18,10 +18,12 @@ namespace FundooNotes.Controllers
     public class NotesController : ControllerBase
     {
         private readonly INoteInterfaceBL _noteInterfaceBL;
+        private readonly IDistributedCache _cache;
 
-        public NotesController(INoteInterfaceBL noteInterfaceBL)
+        public NotesController(INoteInterfaceBL noteInterfaceBL, IDistributedCache cache)
         {
             _noteInterfaceBL = noteInterfaceBL;
+            _cache = cache;
         }
 
         [HttpPost]
@@ -65,20 +67,40 @@ namespace FundooNotes.Controllers
             {
                 var _id = User.FindFirstValue("UserId");
                 int id = Convert.ToInt32(_id);
-                
-                var noteList = _noteInterfaceBL.ViewNote(id);
 
+                var cacheResponse = _cache.GetString(Convert.ToString(id));            //checking if the data is present in cache
 
-                if (noteList.Count == 0)
+                if (cacheResponse != null)
                 {
-                    response.Message = "There is no note.";
-                    response.Success = false;
-                    response.Data = noteList;
+                    var cacheNoteList = JsonSerializer.Deserialize<List<NotesEntity>>(cacheResponse);         //deserializing the data
+
+                    if (cacheNoteList.Count == 0)
+                    {
+                        response.Message = "There is no note.";
+                        response.Success = false;
+                        response.Data = cacheNoteList;
+                    }
+                    else
+                    {
+                        response.Message = "Notes retrieve successfully from cache.";
+                        response.Data = cacheNoteList;
+                    }
                 }
                 else
                 {
-                    response.Message = "Notes retrive successfully.";
-                    response.Data = noteList;
+                    var noteList = _noteInterfaceBL.ViewNote(id);
+
+                    if (noteList.Count == 0)
+                    {
+                        response.Message = "There is no note.";
+                        response.Success = false;
+                        response.Data = noteList;
+                    }
+                    else
+                    {
+                        response.Message = "Notes retrieve successfully from database.";
+                        response.Data = noteList;
+                    }
                 }
             }
             catch(Exception ex)
